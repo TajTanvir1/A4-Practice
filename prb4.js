@@ -1,5 +1,5 @@
 //password()
 
-function password(){
-   
+function password(array){
+   if 
 }

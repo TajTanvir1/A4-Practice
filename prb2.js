@@ -8,7 +8,7 @@ function checkName(inputName) {
    const lastLetter = ["a", "y", "i", "e", "o", "u", "w"];
    
    if(typeof inputName !== 'string'){
-      return "Invalid"
+      return "invalid"
    }
    else{
       const find = inputName.slice(-1);
@@ -26,4 +26,4 @@ function checkName(inputName) {
    
 }
 
-console.log(checkName("Salman"));
+console.log(checkName(["Rashed"]));
