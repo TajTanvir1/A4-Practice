@@ -46,3 +46,21 @@ function password(details){
    const fullPassword = passwordSite.charAt(0).toUpperCase() + passwordSite.slice(1) + "#" + passwordName + "@" + passwordYear;
    return fullPassword;
 }
+
+function monthlySavings(incomes, livingCost) {
+   if (!Array.isArray(incomes) || typeof livingCost !== 'number') {
+       return "invalid input"
+   }
+   let sum = 0;
+   for (let i = 0; i < incomes.length; i++) {
+       if (incomes[i] >= 3000) {
+           incomes[i] -= incomes[i] * .2
+       }
+       sum += incomes[i];
+   }
+   let savings = sum - livingCost;
+   if (savings < 0) {
+       return "earn more"
+   }
+   return savings;
+}
