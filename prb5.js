@@ -13,19 +13,21 @@ function monthlySavings(incomes, livingCost){
         return "invalid input"
     }
 
+    let sum = 0;
     for (let i=0 ; i < incomes.length; i++){
        if (incomes[i] >= 3000){
             incomes[i] -= incomes[i] * .2
         }
+        sum += incomes[i];
     }
 
-    for (let i=0 ; i < incomes.length; i++){
+    let savings = sum - livingCost;
 
+    if(savings < 0){
+        return "earn more"
     }
+
+    return savings;
     
-    
-    // const savings = incomes - livingCost;
-    // return incomes
 }
-// console.log(savings)
-console.log(monthlySavings([2000, 1000], 2))
+console.log(monthlySavings([2000, 1000], [5000]))
