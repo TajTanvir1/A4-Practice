@@ -9,21 +9,16 @@ function checkName(inputName) {
    
    if(typeof inputName !== 'string'){
       return "invalid"
-   }
-   else{
+   }  else{
       const find = inputName.slice(-1);
       const findCase = find.toLowerCase();
-   
-   
+      
       if(lastLetter.includes(findCase)){
          return "Good Name"
-      }
-     
-      else{
+      }  else{
          return "Bad Name"
       }
    }
-   
-}
+   }
 
-console.log(checkName(["Rashed"]));
+console.log(checkName("Jhanka"));

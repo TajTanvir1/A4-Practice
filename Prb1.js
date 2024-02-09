@@ -29,22 +29,17 @@
 
 
 function calculateMoney(ticketSale) {
-    if(ticketSale <= 0 || typeof ticketSale !== "number"){
+    if(ticketSale < 0 || typeof ticketSale !== "number"){
         return "Invalid Number - Please give a positive number properly."
     }
-    // else if (ticketSale !== "number") {
-    //     return "Invalid Number - Please give a number properly."
-    // }
-
     const ticketPrice = 120;
-    const darwanCost = 500;
+    const gateManCost = 500;
     const staffCost = 8 * 50;
-    const netExpense = darwanCost - staffCost;
+    const netExpense = gateManCost + staffCost;
     const income = ticketSale * ticketPrice;
     const netIncome = income - netExpense;
     
-    return netIncome
-    
+    return netIncome;
     }
     
-    console.log(calculateMoney(10));
+    console.log(calculateMoney([]));

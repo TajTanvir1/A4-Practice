@@ -26,19 +26,14 @@
 
 
 function password(details){
-   
-   if(typeof details !== 'object' || details.birthYear < 999){
+   if(typeof details !== 'object' || details.birthYear < 999 || details.siteName === ""){
       return "invalid"
-   }
-   
+   }   
    const passwordName = details.name;
    const passwordYear = details.birthYear;
    const passwordSite = details.siteName;
-
-   
    const fullPassword = passwordSite.charAt(0).toUpperCase() + passwordSite.slice(1) + "#" + passwordName + "@" + passwordYear;
-
    return fullPassword;
 }
 
-console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" }))
+console.log(password({ name: "kolimuddin" , birthYear: 1999 , siteName: "ooo" }))
